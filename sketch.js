@@ -9,7 +9,7 @@ function setup() {
   noCanvas();
   video = createCapture(VIDEO, function () {
     video.elt.setAttribute('playsinline', ''); // iOS에서 영상이 인라인으로 재생되도록 설정
-    video.size(150, 125); // 카메라의 종횡비에 맞게 크기 조절
+    video.size(130, 95); // 카메라의 종횡비에 맞게 크기 조절
   });
 
   asciiDiv = createDiv();
