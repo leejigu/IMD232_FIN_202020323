@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IMD232 FINAL 202020323 이지우</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="../p5Util.js" defer></script>
+    <script src="../asciicode/sketch.js" defer></script>
+    <script src="../asciicode/life.js" defer></script>
+  </head>
+
+  <body>
+    <section>
+      <div class="container">
+        <canvas id="canvas"></canvas>
+        <script src="sketch.js"></script>
+
+        <div class="error">
+          <div class="title">
+            Genome inspection
+            <button class="close-button">X</button>
+          </div>
+          <div class="message">유전자 게놈분석을 시작하시겠습니까?</div>
+          <button class="ok"><span>yes</span></button>
+        </div>
+
+        <div class="error2">
+          <div class="title">
+            Memo
+            <button class="close-button">X</button>
+          </div>
+          <div class="message">
+            *사용방법* yes 버튼을 클릭하면 화면 속 게놈을 분석할 수 있다.
+            <br />
+            <br />
+            미래의 인공지능이 과거의 컴퓨터를 해킹하여 게놈을 분석한다.
+            <br />
+            <br />
+            알고리즘을 결정짓고 우리가 하는 일을 결정짓는 유전자 게놈을 분석하여
+            과거의 게놈을 연구하고 그들이 컴퓨터상에 남긴 디지털 흔적을 해킹할
+            것이다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $('.error').draggable();
+      $('.error2').draggable();
+
+      $('body').on('click', '.ok', '.close-button', function () {
+        window.location.href = '../lifeparticle/index.html';
+      });
+    </script>
+  </body>
+</html>
